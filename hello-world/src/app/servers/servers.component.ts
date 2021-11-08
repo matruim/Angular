@@ -13,11 +13,13 @@ export class ServersComponent implements OnInit {
   allowNewServer = true;
   serverName = "";
   serverCreated = false;
+  servers = ['Testserver','Testserver2']
   constructor() { }
 
   ngOnInit(): void {
   }
   onCreateServer(){
+    this.servers.push(this.serverName)
     this.serverCreated = true;
   }
   onUpdateServerName(e:Event){
