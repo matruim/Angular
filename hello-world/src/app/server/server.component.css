@@ -1,3 +1,6 @@
-.server {
-
+.Online{
+  color:skyblue;
+}
+.Offline{
+  color:ghostwhite;
 }
