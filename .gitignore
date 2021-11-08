@@ -53,5 +53,6 @@ baseline.json
 # Husky
 .husky/_
 
-# Hello World
+# Node modules
 hello-world/node_modules
+RecipeApp/node_modules
