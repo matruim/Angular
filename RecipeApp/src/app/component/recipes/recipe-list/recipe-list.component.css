@@ -2,6 +2,4 @@ button{
   margin-top: 1.3rem;
   margin-bottom: 1.25rem;
 }
-.list-group-item div:first-child{
-  flex-grow: 2;
-}
+
