@@ -4,8 +4,8 @@ import { FormsModule} from "@angular/forms";
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './component/header/header.component';
-import { ShoppingListComponent } from './component/shopping/shopping-list/shopping-list.component';
-import { ShoppingListEditComponent } from './component/shopping/shopping-list/shopping-list-edit/shopping-list-edit.component';
+import { ShoppingListComponent } from './component/shopping-list/shopping-list.component';
+import { ShoppingListEditComponent } from './component/shopping-list/shopping-list-edit/shopping-list-edit.component';
 import { RecipesComponent } from "./component/recipes/recipes.component";
 import { RecipeListComponent } from './component/recipes/recipe-list/recipe-list.component';
 import { RecipeItemComponent } from './component/recipes/recipe-list/recipe-item/recipe-item.component';
