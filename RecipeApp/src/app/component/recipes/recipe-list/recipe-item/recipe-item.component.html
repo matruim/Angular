@@ -1,4 +1,4 @@
-<a href="#" class="list-group-item clearfix d-flex justify-content-between" (click)="onSelect()">
+<a class="list-group-item clearfix d-flex justify-content-between" [routerLink]="[id]" routerLinkActive="active">
   <div>
     <h4 class="mb-1">{{recipe.name}}</h4>
     <p class="mb-1">{{recipe.description}}</p>

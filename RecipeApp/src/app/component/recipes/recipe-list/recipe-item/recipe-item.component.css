@@ -1,3 +1,6 @@
 .list-group-item div:first-child{
   flex-grow: 2;
 }
+a{
+  cursor: pointer;
+}

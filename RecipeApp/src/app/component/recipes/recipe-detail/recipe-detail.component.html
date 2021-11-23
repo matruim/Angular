@@ -15,9 +15,9 @@
         Manage Recipe
       </button>
       <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 40px);">
-        <li><a class="dropdown-item" (click)="addRecipeToShoppingList()" style="cursor: pointer">To Shopping List</a></li>
-        <li><a class="dropdown-item" href="#">Edit Recipe</a></li>
-        <li><a class="dropdown-item" href="#">Delete Recipe</a></li>
+        <li><a class="dropdown-item" (click)="addRecipeToShoppingList()">To Shopping List</a></li>
+        <li><a class="dropdown-item" [routerLink]="['edit']">Edit Recipe</a></li>
+        <li><a class="dropdown-item" (click)="onDelete()">Delete Recipe</a></li>
       </ul>
     </div>
   </div>
