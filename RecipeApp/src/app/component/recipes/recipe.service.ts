@@ -2,11 +2,13 @@ import {EventEmitter, Injectable} from '@angular/core';
 import {Recipe} from "./recipes.model";
 import {Ingredient} from "../../shared/ingredient.model";
 import {ShoppingListService} from "../shopping-list/shopping-list.service";
+import {Subject} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class RecipeService {
+
   private recipes: Recipe[] = [
     new Recipe(
       "Mac and Cheese",
@@ -39,7 +41,6 @@ export class RecipeService {
   addRecipeToShoppingList(recipe: Recipe){
     this.slService.addItemsToList(recipe.ingredients);
   }
-
   removeRecipe(id: number) {
     this.recipes.splice(id,1);
   }
