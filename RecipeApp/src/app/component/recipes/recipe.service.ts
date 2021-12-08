@@ -8,6 +8,7 @@ import {Subject} from "rxjs";
   providedIn: 'root'
 })
 export class RecipeService {
+  recipesChanged = new Subject<Recipe[]>()
 
   private recipes: Recipe[] = [
     new Recipe(
@@ -22,7 +23,7 @@ export class RecipeService {
     new Recipe(
       "Spaghetti",
       "noodles in a tomato sauce",
-      "",
+      "https://media.istockphoto.com/photos/spaghetti-in-a-dish-on-a-white-background-picture-id1144823591?k=20&m=1144823591&s=612x612&w=0&h=6cuhQIP6Xmzu98wYGDnaxyF-Y4PBgfQiejTMQmqQKYQ=",
       [
         new Ingredient("Spaghetti Noodles", 1),
         new Ingredient("Tomato Sauce", 1)
@@ -43,5 +44,14 @@ export class RecipeService {
   }
   removeRecipe(id: number) {
     this.recipes.splice(id,1);
+    this.recipesChanged.next(this.getRecipes());
+  }
+  updateRecipe(index: number, recipe: Recipe){
+    this.recipes[index] = recipe;
+    this.recipesChanged.next(this.getRecipes());
+  }
+  addRecipe(recipe: Recipe){
+    this.recipes.push(recipe);
+    this.recipesChanged.next(this.getRecipes());
   }
 }
