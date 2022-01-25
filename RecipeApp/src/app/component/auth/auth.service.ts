@@ -4,7 +4,7 @@ import {catchError, tap} from "rxjs/operators";
 import {BehaviorSubject, throwError} from "rxjs";
 import {User} from "./user.model";
 import {Router} from "@angular/router";
-import {environment} from "../../../environments/environment.prod";
+import {environment} from "../../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
