@@ -1,9 +1,10 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpErrorResponse} from "@angular/common/http";
 import {catchError, tap} from "rxjs/operators";
-import {BehaviorSubject, Observable, Subject, throwError} from "rxjs";
+import {BehaviorSubject, throwError} from "rxjs";
 import {User} from "./user.model";
 import {Router} from "@angular/router";
+import {environment} from "../../../environments/environment.prod";
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ import {Router} from "@angular/router";
 export class AuthService {
   user = new BehaviorSubject<User>(null);
 
-  private apiKey = 'AIzaSyDRoqgUlMObXo4uWqWHM8GJYHJF2yFnO20';
+  private apiKey = environment.firebaseAPIKey;
   private baseUrl = 'https://identitytoolkit.googleapis.com/v1/accounts:';
   private signUp = 'signUp?key=';
   private signIn = 'signInWithPassword?key=';
