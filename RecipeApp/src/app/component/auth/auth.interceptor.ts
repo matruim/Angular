@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 import {AuthService} from "./auth.service";
 import {exhaustMap, take} from "rxjs/operators";
 
-@Injectable()
+@Injectable({providedIn: 'root'})
 export class AuthInterceptor implements HttpInterceptor {
 
   constructor(private authService: AuthService) {}
